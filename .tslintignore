@@ -1,0 +1,6 @@
+# Static build assets
+build/*
+public/*
+
+# File entries for files ignored from VC
+.gitignore
