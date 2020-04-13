@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
+
+.btn {
+  @apply py-3 text-base outline-none inline-block text-center uppercase rounded-md;
+}
+
+
+.btn:focus {
+  @apply outline-none shadow-outline;
+}
+
+.btn-blue {
+  @apply bg-custom-blue text-white;
+}
+
+.btn-no-blue {
+  @apply bg-white text-black  border-custom-btnBorder border;
+}
+
+.btn-blue:hover {
+  @apply opacity-75;
+}
+
+.btn-no-blue:hover {
+  @apply bg-custom-blue text-white;
+}
+
+input:-webkit-autofill {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #000 ;
+  background-color: transparent;
+}
+
+input:focus,
+input:active {
+  @apply border-blue-600;
+}
+
 @tailwind utilities;

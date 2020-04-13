@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "yarn build:style && react-scripts start",
-    "build:style":"postcss src/assets/styles/tailwind.css -o src/index.css",
+    "start": "npm run build:style && react-scripts start",
+    "build:style": "postcss build src/assets/styles/tailwind.css -o src/index.css",
+    "watch:style": "postcss build src/assets/styles/tailwind.css -o src/index.css --watch",
     "build": "react-scripts build",
     "lint": "tslint -t stylish -p ./tsconfig.json 'src/**/*.{ts,tsx}'",
     "lint:fix": "tslint -t stylish -p ./tsconfig.json --fix 'src/**/*.{ts,tsx}'",
@@ -41,6 +42,7 @@
     "typescript": "~3.7.2"
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^8.3.4",
     "@types/redux-logger": "^3.0.7",
     "husky": "^4.2.3",
     "lint-staged": "^10.1.0",
