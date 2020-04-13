@@ -1,46 +1,34 @@
 import React, {useEffect, useCallback} from 'react';
 import {connect} from 'react-redux';
 import {reduxRequest} from '../../redux/actions/test';
+import { LandingPageState, LandingPageProps } from '../../models';
 import logo from '../../assets/icons/logo.svg';
-import './LandingPage.scss';
 
-type LandingPageProps = {
-  isLoading: boolean;
-  message: string;
-  error: string;
-  reduxRequest(): void;
-};
-
-export const LandingPage: React.FC<LandingPageProps> = ({
-  isLoading,
-  message,
-  error,
-  reduxRequest,
-}) => {
+export const LandingPage = ({isLoading, message, error}: LandingPageProps) => {
   const callReduxTest = useCallback(() => {
     reduxRequest();
-  }, [reduxRequest]);
+  }, []);
   useEffect(() => {
     callReduxTest();
   }, [callReduxTest]);
   return (
-    <div className="App">
+    <div className="flex bg-blue-600 flex-col justify-center h-screen items-center">
       {isLoading ? (
         <p>Loading...</p>
       ) : (
-        <header className="App-header">
+        <header className="text-center">
           <p>Message: {message}</p>
           {error && <p>{error}</p>}
           <h3>Welcome To Trainer App UI</h3>
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>We are getting started soon!!!</p>
+          <img src={logo} className="h-64 w-64" alt="logo" />
+          <p className="text-white">We are getting started soon!!!</p>
         </header>
       )}
     </div>
   );
 };
 
-const mapStateToProps = ({test}: {test: LandingPageProps}) => ({
+const mapStateToProps = (test: LandingPageState) => ({
   isLoading: test.isLoading,
   message: test.message,
   error: test.error,
