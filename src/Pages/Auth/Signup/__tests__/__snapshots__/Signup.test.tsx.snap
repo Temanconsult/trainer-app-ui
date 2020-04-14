@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Signup /> renders signup component elements correctly 1`] = `
+<div>
+  <div
+    class="h-screen flex flex-row"
+  >
+    <div
+      class="h-full w-1/2 hidden lg:block"
+    >
+      <div
+        class="h-full w-full p-5 flex justify-center items-center"
+      >
+        <svg>
+          login.svg
+        </svg>
+      </div>
+    </div>
+    <div
+      class="flex flex-col justify-center relative w-full lg:w-1/2 "
+    >
+      <div
+        class="flex justify-center mb-4"
+      >
+        <svg>
+          logo.svg
+        </svg>
+      </div>
+      <span
+        class="text-center mb-10 text-black opacity-50"
+      >
+        Please complete to create your account
+      </span>
+      <div
+        class="flex flex-col justify-center items-center w-full"
+      >
+        <form
+          class="flex flex-col w-10/12 md:w-8/12 h-full"
+        >
+          <div
+            class="flex justify-between flex-col md:flex-row lg:flex-row"
+          >
+            <input
+              class="my-4 py-2 border-gray-400 border-b text-xs outline-none w-full md:mr-2 lg:mr-2 md:w-1/2 lg:w-1/2"
+              placeholder="First name"
+              type="text"
+            />
+            <input
+              class="my-4 py-2 border-gray-400 border-b text-xs outline-none w-full md:ml-2 lg:ml-2 md:w-1/2 lg:w-1/2"
+              placeholder="Last name"
+              type="text"
+            />
+          </div>
+          <input
+            class="my-4 py-2 border-gray-400 border-b text-xs outline-none"
+            placeholder="Username"
+            type="text"
+          />
+          <input
+            class="my-4 py-2 border-gray-400 border-b text-xs outline-none"
+            placeholder="Email"
+            type="email"
+          />
+          <input
+            class="my-4 py-2 border-gray-400 border-b text-xs outline-none"
+            placeholder="Password"
+            type="password"
+          />
+          <input
+            class="my-4 py-2 border-gray-400 border-b text-xs outline-none"
+            placeholder="Confirm Password"
+            type="password"
+          />
+          <div
+            class="flex justify-between mt-6 items-center"
+          >
+            <div
+              class="flex items-center"
+            >
+              <input
+                type="checkbox"
+              />
+              <span
+                class="ml-2 italic text-xs opacity-75"
+              >
+                I agree with terms and conditionss
+              </span>
+            </div>
+          </div>
+          <div
+            class="flex justify-center flex-col mt-10 items-center"
+          >
+            <button
+              class="btn bg-custom-primary btn-bg text-white w-full md:w-1/2 lg:w-full xl:w-1/2"
+              type="submit"
+            >
+              Sign up
+            </button>
+            <a
+              class="btn border border-custom-twitter text-custom-twitter w-full md:w-1/2 lg:w-full xl:w-1/2 mt-2"
+              href="/"
+            >
+              Sign up with Google
+            </a>
+            <a
+              class="btn bg-custom-fb w-1/2 mt-2 text-white w-full md:w-1/2 lg:w-full xl:w-1/2"
+              href="/"
+            >
+              Sign up with Facebook
+            </a>
+            <a
+              class="text-center mt-10 text-black text-base underline"
+              href="/login"
+            >
+              <span>
+                Already have an account? 
+                <span
+                  class="text-custom-fb"
+                >
+                  Sign in.
+                </span>
+              </span>
+            </a>
+          </div>
+        </form>
+      </div>
+      <span
+        class="absolute left-0 right-0 bottom-0 p-4 text-xs text-center text-custom-gray"
+      >
+        Term of use. Privacy policy
+      </span>
+    </div>
+  </div>
+</div>
+`;

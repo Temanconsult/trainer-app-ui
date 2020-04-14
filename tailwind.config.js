@@ -27,8 +27,10 @@ module.exports = {
       },
       custom: {
         blue: '#273DC9',
-        btnBorder: '#1D68F4',
-        gray: '#a1a1a4'
+        gray: '#a1a1a4',
+        primary: '#A77BFF',
+        twitter: '#1F98E9',
+        fb: '#5E93F7'
       },
       red: {
         100: '#fff5f5',
