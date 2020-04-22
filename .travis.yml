@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - node
+cache:
+  directories:
+    - node_modules
+before_script:
+  - yarn install
+script:
+  - yarn test
+  - yarn build
+deploy:
+  provider: heroku
+  api_key: $HEROKU_API_KEY
+  app:
+    develop: trainer-app-ui-staging
+    master: trainer-app-ui-prod
+    run:
+      - yarn install
