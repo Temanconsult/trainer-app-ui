@@ -1,0 +1,681 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LandingPage /> it should match with previous snapshot 1`] = `
+<div>
+  <div
+    class="landing-page__container"
+  >
+    <div
+      class="header-hero py-6 lg:px-16"
+    >
+      <div
+        class="header px-2 flex flex-row items-center lg:p-16 lg:pr-8 lg:pt-10"
+      >
+        <img
+          alt="best tutor logo"
+          class="mr-10 xl:mr-20"
+          src="logo.svg"
+        />
+        <nav
+          class="nav hidden md:flex w-full md:justify-end lg:items-center lg:flex-row lg:justify-between"
+        >
+          <ul
+            class="flex items-center lg:w-2/5"
+          >
+            <li>
+              <a
+                class="pr-8"
+                href="/!"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                class="pr-8"
+                href="/!"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                class="pr-8"
+                href="/!"
+              >
+                Courses
+              </a>
+            </li>
+            <li>
+              <a
+                class="pr-8"
+                href="/!"
+              >
+                Tutors
+              </a>
+            </li>
+          </ul>
+          <ul
+            class="flex items-center justify-end mt-6 md:mt-0 lg:mt-0 lg:w-1/2"
+          >
+            <li
+              class="hidden xl:block pr-6"
+            >
+              <span>
+                Teach On Best Tutor
+              </span>
+            </li>
+            <li
+              class="pr-6"
+            >
+              <a
+                class="rounded-full py-3 px-8 border border-custom-lborder inline-block"
+                href="/!"
+              >
+                Login
+              </a>
+            </li>
+            <li>
+              <a
+                class="pri-btn inline-block"
+                href="/!"
+              >
+                Sign up
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div
+        class="hero flex pt-16 md:px-16"
+      >
+        <div
+          class="left items-center md:items-start w-full p-2  flex flex-col justify-evenly h-full lg:w-2/5"
+        >
+          <h1
+            class="text-3xl font-bold mb-10"
+          >
+            Learn with ease 
+            <br />
+             and at your own pace
+          </h1>
+          <span
+            class="text-base mb-10 xl:text-xl"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et erat felis. Sed odio lorem, facilisis non gravida nec, dignissim eget risus. Fusce ut vulputate est. Aliquam ut arcu efficitur nisl aliquam pulvinar eu nec libero. Proin commodo vel elit id sodales.
+          </span>
+          <a
+            class="pri-btn text-xl inline-block"
+            href="/!"
+          >
+            Learn more
+          </a>
+        </div>
+        <div
+          class="right flex justify-end h-full w-full hidden lg:flex lg:w-3/5"
+        >
+          <img
+            alt="teacher teaching a student"
+            class="h-auto"
+            src="tutor.svg"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="courses h-auto p-2 lg:px-32"
+    >
+      <h1
+        class="text-2xl font-medium p-6 text-white text-center"
+      >
+        Our Courses
+      </h1>
+      <div
+        class="courses-list grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3"
+      >
+        <div
+          class="course-card flex flex-col justify-evenly shadow-2xl bg-white px-6 rounded items-start"
+        >
+          <img
+            alt="data science course"
+            src="datascience.svg"
+          />
+          <h1
+            class="font-medium text-black text-2xl"
+          >
+            Scrum Master
+          </h1>
+          <span
+            class="text-xl text-gray-900"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et erat felis. Sed odio lorem, facilisis
+          </span>
+          <a
+            href="/!"
+          >
+            <svg>
+              arrow.svg
+            </svg>
+          </a>
+        </div>
+        <div
+          class="course-card flex flex-col justify-evenly shadow-2xl bg-white px-6 rounded items-start"
+        >
+          <img
+            alt="data science course"
+            src="pmp.svg"
+          />
+          <h1
+            class="font-medium text-black text-2xl"
+          >
+            PMP
+          </h1>
+          <span
+            class="text-xl text-gray-900"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et erat felis. Sed odio lorem, facilisis
+          </span>
+          <a
+            href="/!"
+          >
+            <svg>
+              arrow.svg
+            </svg>
+          </a>
+        </div>
+        <div
+          class="course-card flex flex-col justify-evenly shadow-2xl bg-white px-6 rounded items-start"
+        >
+          <img
+            alt="data science course"
+            src="devops.svg"
+          />
+          <h1
+            class="font-medium text-black text-2xl"
+          >
+            Devops
+          </h1>
+          <span
+            class="text-xl text-gray-900"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et erat felis. Sed odio lorem, facilisis
+          </span>
+          <a
+            href="/!"
+          >
+            <svg>
+              arrow.svg
+            </svg>
+          </a>
+        </div>
+        <div
+          class="course-card flex flex-col justify-evenly shadow-2xl bg-white px-6 rounded items-start"
+        >
+          <img
+            alt="data science course"
+            src="js.png"
+          />
+          <h1
+            class="font-medium text-black text-2xl"
+          >
+            JavaScript
+          </h1>
+          <span
+            class="text-xl text-gray-900"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et erat felis. Sed odio lorem, facilisis
+          </span>
+          <a
+            href="/!"
+          >
+            <svg>
+              arrow.svg
+            </svg>
+          </a>
+        </div>
+        <div
+          class="course-card flex flex-col justify-evenly shadow-2xl bg-white px-6 rounded items-start"
+        >
+          <img
+            alt="data science course"
+            src="datascience.svg"
+          />
+          <h1
+            class="font-medium text-black text-2xl"
+          >
+            Scrum Master
+          </h1>
+          <span
+            class="text-xl text-gray-900"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et erat felis. Sed odio lorem, facilisis
+          </span>
+          <a
+            href="/!"
+          >
+            <svg>
+              arrow.svg
+            </svg>
+          </a>
+        </div>
+        <div
+          class="course-card flex flex-col justify-evenly shadow-2xl bg-white px-6 rounded items-start"
+        >
+          <img
+            alt="data science course"
+            src="datascience.svg"
+          />
+          <h1
+            class="font-medium text-black text-2xl"
+          >
+            Scrum Master
+          </h1>
+          <span
+            class="text-xl text-gray-900"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et erat felis. Sed odio lorem, facilisis
+          </span>
+          <a
+            href="/!"
+          >
+            <svg>
+              arrow.svg
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div
+        class="flex flex-row justify-end items-center py-6"
+      >
+        <a
+          class="bg-white p-2 rounded-full px-6 flex items-center"
+          href="/"
+        >
+          <span
+            class="text-center font-medium mr-4"
+          >
+            More
+          </span>
+          <img
+            alt="Link To More Courses"
+            src="more.svg"
+            style="width: 30px; height: auto;"
+          />
+        </a>
+      </div>
+    </div>
+    <div
+      class="about-us h-auto p-2 pt-6 lg:px-24"
+    >
+      <h1
+        class="text-2xl font-medium p-6 text-center"
+      >
+        What they say about us
+      </h1>
+      <div
+        class="about-us-cards__wrapper grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3"
+      >
+        <div
+          class="about-us-card flex flex-col items-center bg-custom-aboutCard justify-between"
+        >
+          <div
+            class="p-6 flex flex-col items-center justify-around"
+          >
+            <img
+              alt="client testimony"
+              src="avatar.png"
+            />
+            <div>
+              <p
+                class="text-3xl leading-3 pt-6 text-custom-primary"
+              >
+                "
+              </p>
+              <span
+                class="py-4"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et erat felis. Sed odio lorem, facilisis
+              </span>
+            </div>
+          </div>
+          <div
+            class="card-footer w-full bg-white text-center p-4 shadow-md"
+          >
+            <h1
+              class="text-xl font-medium"
+            >
+              Dayo Adebisi
+            </h1>
+            <span>
+              Srum Master Student
+            </span>
+          </div>
+        </div>
+        <div
+          class="about-us-card flex flex-col items-center bg-custom-aboutCard justify-between"
+        >
+          <div
+            class="p-6 flex flex-col items-center justify-around"
+          >
+            <img
+              alt="client testimony"
+              src="avatar.png"
+            />
+            <div>
+              <p
+                class="text-3xl leading-3 pt-6 text-custom-primary"
+              >
+                "
+              </p>
+              <span
+                class="py-4"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et erat felis. Sed odio lorem, facilisis
+              </span>
+            </div>
+          </div>
+          <div
+            class="card-footer w-full bg-white text-center p-4 shadow-md"
+          >
+            <h1
+              class="text-xl font-medium"
+            >
+              Dayo Adebisi
+            </h1>
+            <span>
+              Srum Master Student
+            </span>
+          </div>
+        </div>
+        <div
+          class="about-us-card flex flex-col items-center bg-custom-aboutCard justify-between"
+        >
+          <div
+            class="p-6 flex flex-col items-center justify-around"
+          >
+            <img
+              alt="client testimony"
+              src="avatar.png"
+            />
+            <div>
+              <p
+                class="text-3xl leading-3 pt-6 text-custom-primary"
+              >
+                "
+              </p>
+              <span
+                class="py-4"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et erat felis. Sed odio lorem, facilisis
+              </span>
+            </div>
+          </div>
+          <div
+            class="card-footer w-full bg-white text-center p-4 shadow-md"
+          >
+            <h1
+              class="text-xl font-medium"
+            >
+              Dayo Adebisi
+            </h1>
+            <span>
+              Srum Master Student
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="tutors flex flex-col justify-center items-center h-64 py-12 text-center bg-cover bg-center my-10"
+      style="background-image: url(ist-bg.svg);"
+    >
+      <div
+        class="text-wrapper"
+      >
+        <h1
+          class="text-4xl font-medium"
+        >
+          Become an Instructor
+        </h1>
+        <a
+          class="pri-btn bg-custom-teach shadow-lg text-xl inline-block"
+          href="/"
+        >
+          Teach here
+        </a>
+      </div>
+    </div>
+    <div
+      class="footer ft-overlay text-white bg-cover bg-center relative pt-6 lg:px-24 xl:px-56"
+      style="background-image: url(footbg.png);"
+    >
+      <div
+        class="centered-footer w-full lg:flex lg:flex-col"
+      >
+        <div
+          class="px-6 lg:px-0 z-10"
+        >
+          <img
+            alt="best tutor logo"
+            class="mr-20"
+            src="logo.svg"
+          />
+        </div>
+        <div
+          class="footer-content flex flex-col justify-between py-4 px-6 lg:px-0 md:flex-row z-10"
+        >
+          <div
+            class="footer-1 w-full z-10 md:w-1/2"
+          >
+            <span
+              class="text-base"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et erat felis. Sed odio lorem, facilisis non gravida nec, dignissim eget risus. Fusce ut vulputate est. Aliquam ut arcu
+            </span>
+            <div
+              class="social-media-icons flex items-center pt-2 hidden"
+            >
+              <ul
+                class="flex"
+              >
+                <li
+                  class="pr-2"
+                >
+                  <a
+                    href="/"
+                  >
+                    <img
+                      alt="Link to instagram"
+                      src="#"
+                    />
+                  </a>
+                </li>
+                <li
+                  class="pr-2"
+                >
+                  <a
+                    href="/"
+                  >
+                    <img
+                      alt="Link to twitter"
+                      src="#"
+                    />
+                  </a>
+                </li>
+                <li
+                  class="pr-2"
+                >
+                  <a
+                    href="/"
+                  >
+                    <img
+                      alt="Link to facebook"
+                      src="#"
+                    />
+                  </a>
+                </li>
+                <li
+                  class="pr-2"
+                >
+                  <a
+                    href="/"
+                  >
+                    <img
+                      alt="Link to gmail"
+                      src="#"
+                    />
+                  </a>
+                </li>
+                <li
+                  class="pr-2"
+                >
+                  <a
+                    href="/"
+                  >
+                    <img
+                      alt="Link to youTube"
+                      src="#"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="flex justify-between mt-4 z-50 md:mt-0 md:w-2/5"
+          >
+            <div
+              class="footer-2"
+            >
+              <h1
+                class="text-lg mb-2"
+              >
+                About Us
+              </h1>
+              <ul>
+                <li>
+                  <a
+                    class="text-base"
+                    href="/"
+                  >
+                    Safety
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="text-base"
+                    href="/"
+                  >
+                    Find Courses
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="text-base"
+                    href="/"
+                  >
+                    Become a Tutor
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="text-base"
+                    href="/"
+                  >
+                    Get help
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="footer-3"
+            >
+              <h1
+                class="text-lg mb-2"
+              >
+                Courses
+              </h1>
+              <ul>
+                <li>
+                  <a
+                    class="text-base"
+                    href="/"
+                  >
+                    Scrum Master
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="text-base"
+                    href="/"
+                  >
+                    Cloud
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="text-base"
+                    href="/"
+                  >
+                    PMP
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="text-base"
+                    href="/"
+                  >
+                    DevOp
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="app-service border-t-2 flex justify-between items-center py-4 px-6 lg:px-0 z-10 flex-col-reverse md:flex-row lg:w-full"
+        >
+          <div
+            class="mt-4 text-center text-xs w-full z-10 md:mt-0 md:text-left md:text-base"
+          >
+            <span>
+               Copyright 2020
+            </span>
+          </div>
+          <ul
+            class="flex z-10 w-full text-center flex-col md:flex-row md:justify-end"
+          >
+            <li
+              class="pl-4 text-base"
+            >
+              <a
+                href="/"
+              >
+                Term of use
+              </a>
+            </li>
+            <li
+              class="pl-4 text-base"
+            >
+              <a
+                href="/"
+              >
+                Privacy Policy
+              </a>
+            </li>
+            <li
+              class="pl-4 text-base"
+            >
+              <a
+                href="/"
+              >
+                Cookie Policy
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
