@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "npm run build:style && react-scripts start",
-    "build:style":"postcss build src/assets/styles/tailwind.css -o src/index.css",
+    "start": "yarn build:style && react-scripts start",
+    "build:style":"postcss src/assets/styles/tailwind.css -o src/index.css",
     "build": "react-scripts build",
     "lint": "tslint -t stylish -p ./tsconfig.json 'src/**/*.{ts,tsx}'",
     "lint:fix": "tslint -t stylish -p ./tsconfig.json --fix 'src/**/*.{ts,tsx}'",
