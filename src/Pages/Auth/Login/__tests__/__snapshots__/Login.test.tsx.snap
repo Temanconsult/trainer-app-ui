@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Login /> renders login component elements correctly 1`] = `
+<div>
+  <div
+    class="h-screen flex flex-row"
+  >
+    <div
+      class="h-full w-1/2 hidden lg:block"
+    >
+      <div
+        class="h-full w-full p-5 flex justify-center items-center"
+      >
+        <svg>
+          login.svg
+        </svg>
+      </div>
+    </div>
+    <div
+      class="flex flex-col justify-center relative w-full lg:w-1/2 "
+    >
+      <div
+        class="flex justify-center mb-10"
+      >
+        <svg>
+          logo.svg
+        </svg>
+      </div>
+      <span
+        class="text-center mb-10 text-black opacity-50 text-base"
+      >
+        Welcome back! 
+        <br
+          class="sm:inline lg:hidden"
+        />
+        <span>
+          Please login to your account.
+        </span>
+      </span>
+      <div
+        class="flex flex-col justify-center items-center w-full h-64"
+      >
+        <form
+          class="flex flex-col w-10/12 md:w-8/12 h-full"
+        >
+          <input
+            class="my-4 py-2 border-gray-400 border-b text-xs outline-none"
+            placeholder="Username"
+            type="text"
+          />
+          <input
+            class="my-4 py-2 border-gray-400 border-b text-xs outline-none"
+            placeholder="Password"
+            type="password"
+          />
+          <div
+            class="flex justify-between mt-6 items-center"
+          >
+            <div
+              class="flex items-center"
+            >
+              <input
+                type="checkbox"
+              />
+              <span
+                class="ml-2"
+              >
+                Remember me
+              </span>
+            </div>
+            <a
+              class="italic"
+              href="/"
+            >
+              Forgot Password?
+            </a>
+          </div>
+          <div
+            class="flex justify-between mt-10 items-center"
+          >
+            <button
+              class="btn text-white bg-custom-primary w-1/2 mr-2"
+              type="submit"
+            >
+              Login
+            </button>
+            <a
+              class="btn text-black border border-custom-primary opacity-75 w-1/2 ml-2"
+              href="/signup"
+            >
+              Sign up
+            </a>
+          </div>
+        </form>
+      </div>
+      <span
+        class="absolute left-0 right-0 bottom-0 p-4 text-xs text-center text-custom-gray"
+      >
+        Term of use. Privacy policy
+      </span>
+    </div>
+  </div>
+</div>
+`;

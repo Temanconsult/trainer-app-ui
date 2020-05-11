@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
+
+.btn {
+  @apply py-3 px-4 text-base outline-none inline-block text-center rounded-full;
+}
+
+
+.btn:focus {
+  @apply outline-none shadow-outline;
+}
+
+.btn:hover {
+  @apply opacity-75;
+}
+
+input:-webkit-autofill {
+  transition: background-color .5s ease-in-out 0s;
+  -webkit-text-fill-color: #000 ;
+  background-color: transparent;
+}
+
+input:focus,
+input:active {
+  @apply border-blue-600 text-base;
+  transition: .1s ease-in-out;
+}
+
 @tailwind utilities;
