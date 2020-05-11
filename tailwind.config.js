@@ -30,7 +30,8 @@ module.exports = {
         gray: '#a1a1a4',
         primary: '#A77BFF',
         twitter: '#1F98E9',
-        fb: '#5E93F7'
+        fb: '#5E93F7',
+        btnBorder: '#1D68F4',
       },
       red: {
         100: '#fff5f5',
