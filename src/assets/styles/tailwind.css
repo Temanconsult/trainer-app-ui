@@ -20,10 +20,23 @@ input:-webkit-autofill {
   background-color: transparent;
 }
 
+.input {
+  @apply m-0 py-2 border-gray-400 border-b text-xs outline-none w-full;
+}
+
+.input-error {
+  transition: border-bottom .1s ease-in-out;
+  @apply border-red-500 m-0 my-4 py-2 border-b text-xs outline-none w-full;
+}
+
 input:focus,
 input:active {
-  @apply border-blue-600 text-base;
-  transition: .1s ease-in-out;
+  background-color: transparent;
+  transition: font-size 0.1s ease-in;
+}
+
+.input-wrapper {
+  transition: all 0.5s ease-in;
 }
 
 @tailwind utilities;

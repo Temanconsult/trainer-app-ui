@@ -2,8 +2,36 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import {ReactComponent as SignupImage} from '../../../assets/images/login.svg';
 import {ReactComponent as Logo} from '../../../assets/images/logo.svg';
+import {useForm} from 'react-hook-form';
+import * as yup from 'yup';
+
+const SignupSchema = yup.object().shape({
+  firstname: yup.string().required('First name is required'),
+  lastname: yup.string().required('Last name is required'),
+  username: yup.string().required('User name is required'),
+  email: yup.string().email().required(),
+  password: yup.string().min(6, 'Password should be at least 6 characters'),
+  confirmPassword: yup
+    .string()
+    .oneOf([yup.ref('password'), null], 'Passwords must match')
+    .required('Confirm password is required'),
+  termsAndCondition: yup.boolean().required(),
+});
 
 const Signup = () => {
+  const {register, handleSubmit, errors} = useForm({
+    validationSchema: SignupSchema,
+  });
+
+  const onSubmit = (data) => console.log(data);
+
+  const rendeValidationError = (value) => {
+    if (errors[value])
+      return (
+        <span className="text-sm text-red-600">{errors[value].message}</span>
+      );
+  };
+
   return (
     <div className="h-screen flex flex-row">
       <div
@@ -24,42 +52,108 @@ const Signup = () => {
           Please complete to create your account
         </span>
         <div className="flex flex-col justify-center items-center w-full">
-          <form className="flex flex-col w-10/12 md:w-8/12 h-full">
+          <form
+            className="flex flex-col w-10/12 md:w-8/12 h-full"
+            onSubmit={handleSubmit(onSubmit)}
+          >
             <div className="flex justify-between flex-col md:flex-row lg:flex-row">
-              <input
-                type="text"
-                placeholder="First name"
-                className="my-4 py-2 border-gray-400 border-b text-xs outline-none w-full md:mr-2 lg:mr-2 md:w-1/2 lg:w-1/2"
-              />
-              <input
-                type="text"
-                placeholder="Last name"
-                className="my-4 py-2 border-gray-400 border-b text-xs outline-none w-full md:ml-2 lg:ml-2 md:w-1/2 lg:w-1/2"
-              />
+              <div className="input-wrapper my-4 md:mr-2 lg:mr-2 md:mr-2 lg:mr-2 w-1/2">
+                <input
+                  type="text"
+                  name="firstname"
+                  ref={register}
+                  placeholder="First name"
+                  className={
+                    errors.firstname
+                      ? 'input-error m-0 md:w-full lg:w-full'
+                      : 'input md:w-full lg:w-full'
+                  }
+                />
+                {rendeValidationError('firstname')}
+              </div>
+
+              <div className="input-wrapper my-4 w-1/2">
+                <input
+                  type="text"
+                  name="lastname"
+                  ref={register}
+                  placeholder="Last name"
+                  className={
+                    errors.lastname
+                      ? 'input-error m-0 md:w-full lg:w-full'
+                      : 'input md:w-full lg:w-full'
+                  }
+                />
+                {rendeValidationError('lastname')}
+              </div>
             </div>
-            <input
-              type="text"
-              placeholder="Username"
-              className="my-4 py-2 border-gray-400 border-b text-xs outline-none"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              className="my-4 py-2 border-gray-400 border-b text-xs outline-none"
-            />
-            <input
-              type="password"
-              placeholder="Password"
-              className="my-4 py-2 border-gray-400 border-b text-xs outline-none"
-            />
-            <input
-              type="password"
-              placeholder="Confirm Password"
-              className="my-4 py-2 border-gray-400 border-b text-xs outline-none"
-            />
+
+            <div className="input-wrapper my-4 w-full">
+              <input
+                type="text"
+                name="username"
+                ref={register}
+                placeholder="Username"
+                className={
+                  errors.username
+                    ? 'input py-2 border-red-500 border-b text-xs outline-none'
+                    : 'input py-2 border-gray-400 border-b text-xs outline-none'
+                }
+              />
+              {rendeValidationError('username')}
+            </div>
+
+            <div className="input-wrapper my-4 w-full">
+              <input
+                type="text"
+                name="email"
+                ref={register}
+                placeholder="Email"
+                className={
+                  errors.email
+                    ? 'input py-2 border-red-500 border-b text-xs outline-none'
+                    : 'input py-2 border-gray-400 border-b text-xs outline-none'
+                }
+              />
+              {rendeValidationError('email')}
+            </div>
+
+            <div className="input-wrapper my-4 w-full">
+              <input
+                type="password"
+                name="password"
+                ref={register}
+                placeholder="Password"
+                className={
+                  errors.password
+                    ? 'input py-2 border-red-500 border-b text-xs outline-none'
+                    : 'input py-2 border-gray-400 border-b text-xs outline-none'
+                }
+              />
+              {rendeValidationError('password')}
+            </div>
+
+            <div className="input-wrapper my-4 w-full">
+              <input
+                type="password"
+                name="confirmPassword"
+                ref={register}
+                placeholder="Confirm Password"
+                className={
+                  errors.confirmPassword
+                    ? 'input py-2 border-red-500 border-b text-xs outline-none'
+                    : 'input py-2 border-gray-400 border-b text-xs outline-none'
+                }
+              />
+              {rendeValidationError('confirmPassword')}
+            </div>
             <div className="flex justify-between mt-6 items-center">
               <div className="flex items-center">
-                <input type="checkbox" />
+                <input
+                  type="checkbox"
+                  name="termsAndCondition"
+                  ref={register}
+                />
                 <span className="ml-2 italic text-xs opacity-75">
                   I agree with terms and conditionss
                 </span>
@@ -78,7 +172,10 @@ const Signup = () => {
               >
                 Sign up with Google
               </Link>
-              <Link to="#" className="btn bg-custom-fb w-1/2 mt-2 text-white w-full md:w-1/2 lg:w-full xl:w-1/2">
+              <Link
+                to="#"
+                className="btn bg-custom-fb w-1/2 mt-2 text-white w-full md:w-1/2 lg:w-full xl:w-1/2"
+              >
                 Sign up with Facebook
               </Link>
 

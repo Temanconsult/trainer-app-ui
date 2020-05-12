@@ -40,37 +40,67 @@ exports[`<Signup /> renders signup component elements correctly 1`] = `
           <div
             class="flex justify-between flex-col md:flex-row lg:flex-row"
           >
+            <div
+              class="input-wrapper my-4 md:mr-2 lg:mr-2 md:mr-2 lg:mr-2 w-1/2"
+            >
+              <input
+                class="input md:w-full lg:w-full"
+                name="firstname"
+                placeholder="First name"
+                type="text"
+              />
+            </div>
+            <div
+              class="input-wrapper my-4 w-1/2"
+            >
+              <input
+                class="input md:w-full lg:w-full"
+                name="lastname"
+                placeholder="Last name"
+                type="text"
+              />
+            </div>
+          </div>
+          <div
+            class="input-wrapper my-4 w-full"
+          >
             <input
-              class="my-4 py-2 border-gray-400 border-b text-xs outline-none w-full md:mr-2 lg:mr-2 md:w-1/2 lg:w-1/2"
-              placeholder="First name"
-              type="text"
-            />
-            <input
-              class="my-4 py-2 border-gray-400 border-b text-xs outline-none w-full md:ml-2 lg:ml-2 md:w-1/2 lg:w-1/2"
-              placeholder="Last name"
+              class="input py-2 border-gray-400 border-b text-xs outline-none"
+              name="username"
+              placeholder="Username"
               type="text"
             />
           </div>
-          <input
-            class="my-4 py-2 border-gray-400 border-b text-xs outline-none"
-            placeholder="Username"
-            type="text"
-          />
-          <input
-            class="my-4 py-2 border-gray-400 border-b text-xs outline-none"
-            placeholder="Email"
-            type="email"
-          />
-          <input
-            class="my-4 py-2 border-gray-400 border-b text-xs outline-none"
-            placeholder="Password"
-            type="password"
-          />
-          <input
-            class="my-4 py-2 border-gray-400 border-b text-xs outline-none"
-            placeholder="Confirm Password"
-            type="password"
-          />
+          <div
+            class="input-wrapper my-4 w-full"
+          >
+            <input
+              class="input py-2 border-gray-400 border-b text-xs outline-none"
+              name="email"
+              placeholder="Email"
+              type="text"
+            />
+          </div>
+          <div
+            class="input-wrapper my-4 w-full"
+          >
+            <input
+              class="input py-2 border-gray-400 border-b text-xs outline-none"
+              name="password"
+              placeholder="Password"
+              type="password"
+            />
+          </div>
+          <div
+            class="input-wrapper my-4 w-full"
+          >
+            <input
+              class="input py-2 border-gray-400 border-b text-xs outline-none"
+              name="confirmPassword"
+              placeholder="Confirm Password"
+              type="password"
+            />
+          </div>
           <div
             class="flex justify-between mt-6 items-center"
           >
@@ -78,6 +108,7 @@ exports[`<Signup /> renders signup component elements correctly 1`] = `
               class="flex items-center"
             >
               <input
+                name="termsAndCondition"
                 type="checkbox"
               />
               <span
