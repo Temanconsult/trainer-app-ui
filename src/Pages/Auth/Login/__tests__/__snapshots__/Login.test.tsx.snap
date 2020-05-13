@@ -43,16 +43,26 @@ exports[`<Login /> renders login component elements correctly 1`] = `
         <form
           class="flex flex-col w-10/12 md:w-8/12 h-full"
         >
-          <input
-            class="my-4 py-2 border-gray-400 border-b text-xs outline-none"
-            placeholder="Username"
-            type="text"
-          />
-          <input
-            class="my-4 py-2 border-gray-400 border-b text-xs outline-none"
-            placeholder="Password"
-            type="password"
-          />
+          <div
+            class="input-wrapper my-4 w-full"
+          >
+            <input
+              class="input py-2 border-gray-400 border-b text-xs outline-none"
+              name="username"
+              placeholder="Username"
+              type="text"
+            />
+          </div>
+          <div
+            class="input-wrapper my-4 w-full"
+          >
+            <input
+              class="input py-2 border-gray-400 border-b text-xs outline-none"
+              name="password"
+              placeholder="Password"
+              type="password"
+            />
+          </div>
           <div
             class="flex justify-between mt-6 items-center"
           >
@@ -60,6 +70,7 @@ exports[`<Login /> renders login component elements correctly 1`] = `
               class="flex items-center"
             >
               <input
+                name="rememberMe"
                 type="checkbox"
               />
               <span
