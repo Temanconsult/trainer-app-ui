@@ -1,0 +1,163 @@
+.login-wrapper {
+  font-size: 12px;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+
+  .left-section {
+    height: 100%;
+    width: 50%;
+    display: none;
+    background: linear-gradient(124deg, #ede4ff 50%, #e6dbfb 50%);
+
+    .image {
+      height: 100%;
+      width: 100%;
+      padding: 1.25rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .right-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+
+    .logo-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .welcome {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: black;
+      opacity: 0.5;
+      font-size: 1em;
+    }
+
+    .form-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      text-align: left;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        height: 100%;
+
+        .form-footer {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 1.5rem;
+          align-items: center;
+  
+          .remember-me {
+            display: flex;
+            align-items: center;
+  
+            span {
+              margin-left: 0.5rem;
+            }
+          }
+  
+          .forgot-password {
+            font-style: italic;
+          }
+        }
+      }
+  
+      .input-wrapper {
+        margin: 1rem 0;
+        width: 100%;
+  
+        .input,
+        .input-error {
+          margin: 0;
+          padding: 0.5rem 0;
+          border: none;
+          border-bottom: 1px solid gray;
+          outline: none;
+          font-size: 0.75rem;
+        }
+  
+        .input-error {
+          border-bottom: 1px solid red;
+        }
+      }
+
+      .submit-btn-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2.5rem;
+        align-items: center;
+
+        button, .signup-link {
+          color: #fff;
+          background-color: #A77BFF;
+          width: 50%;
+          margin-right: 0.5rem;
+          padding: 0.5rem 1rem;
+          font-size: 1em;
+          outline: none;
+          text-align: center;
+          border-radius: 9999px;
+        }
+
+        .signup-link {
+          color: black;
+          border: 1px solid #A77BFF;
+          background: #fff;
+          opacity: 0.75;
+          width: 50%;
+          margin-left: 0.5rem;
+        }
+      }
+    }
+
+    .terms {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 1rem;
+      font-size: 0.75;
+      text-align: center;
+      color: gray;
+    }
+  }
+
+  .error {
+    font-size: 1em;
+    color: red;
+  };
+
+  @media(min-width: 640px) {
+    br {
+      display: inline;
+    }
+  }
+
+  @media(min-width: 1024px) {
+    .left-section {
+      display: block;
+    }
+
+    .right-section {
+      width: 50%;
+    }
+
+    br {
+      display: inline;
+    }
+  }
+}
