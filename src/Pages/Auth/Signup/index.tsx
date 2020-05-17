@@ -1,38 +1,31 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
+import {useForm} from 'react-hook-form';
+import {signup} from '../../../redux/actions/auth';
 import {ReactComponent as SignupImage} from '../../../assets/images/login.svg';
 import {ReactComponent as Logo} from '../../../assets/images/logo.svg';
-import {useForm} from 'react-hook-form';
-import * as yup from 'yup';
+import {SignupSchema} from '../../../formValidationSchema';
 import './index.scss';
 
-const SignupSchema = yup.object().shape({
-  firstname: yup.string().required('First name is required'),
-  lastname: yup.string().required('Last name is required'),
-  username: yup.string().required('User name is required'),
-  email: yup.string().email().required(),
-  password: yup.string().min(6, 'Password should be at least 6 characters'),
-  confirmPassword: yup
-    .string()
-    .oneOf([yup.ref('password'), null], 'Passwords must match')
-    .required('Confirm password is required'),
-  termsAndCondition: yup.boolean().required(),
-});
+interface SignupProps {
+  signup(payload): void;
+}
 
-const Signup = () => {
+export const Signup: React.FC<SignupProps> = ({signup}) => {
   const {register, handleSubmit, errors} = useForm({
     validationSchema: SignupSchema,
   });
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => signup(data);
 
-  const rendeValidationError = (value) => {
-    if (errors[value])
-      return <span className="error">{errors[value].message}</span>;
+  const rendeValidationError = (name) => {
+    if (errors[name])
+      return <span className="error">{errors[name].message}</span>;
   };
 
   return (
-    <div className="login-wrapper">
+    <div className="signup-wrapper">
       <div className="left-section">
         <div className="image">
           <SignupImage />
@@ -114,9 +107,16 @@ const Signup = () => {
               />
               {rendeValidationError('confirmPassword')}
             </div>
-            <div className="terms-and-condition">
-              <input type="checkbox" name="termsAndCondition" ref={register} />
-              <span>I agree with terms and conditionss</span>
+            <div className="terms-wrapper">
+              <div className="terms-and-condition">
+                <input
+                  type="checkbox"
+                  name="termsAndCondition"
+                  ref={register}
+                />
+                <span>I agree with terms and conditionss</span>
+              </div>
+              {rendeValidationError('termsAndCondition')}
             </div>
 
             <div className="btn-container">
@@ -130,19 +130,27 @@ const Signup = () => {
                 Sign up with Facebook
               </button>
 
-              <Link to="/login" className="login-link">
-                <span>
-                  Already have an account?&nbsp;
-                  <span className="sign-in">Sign in.</span>
-                </span>
-              </Link>
+              <div className="login-redirect">
+                <Link to="/login" className="login-link">
+                  <span>
+                    Already have an account?&nbsp;
+                    <span className="sign-in">Sign in.</span>
+                  </span>
+                </Link>
+              </div>
             </div>
           </form>
         </div>
-        <span className="terms">Term of use. Privacy policy</span>
+        <div className="tc">
+          <span className="terms">Term of use. Privacy policy</span>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Signup;
+const mapDispatchToProps = {
+  signup,
+};
+
+export default connect(null, mapDispatchToProps)(Signup);

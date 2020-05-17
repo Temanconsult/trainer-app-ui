@@ -1,27 +1,27 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
+import {useForm} from 'react-hook-form';
+import {login} from '../../../redux/actions/auth';
 import {ReactComponent as LoginImage} from '../../../assets/images/login.svg';
 import {ReactComponent as Logo} from '../../../assets/images/logo.svg';
-import {useForm} from 'react-hook-form';
-import * as yup from 'yup';
+import {LoginSchema} from '../../../formValidationSchema';
 import './index.scss';
 
-const LoginSchema = yup.object().shape({
-  username: yup.string().required('User name is required'),
-  password: yup.string().min(6, 'Password should be at least 6 characters'),
-  rememberMe: yup.boolean(),
-});
+interface LoginProps {
+  login(payload): void;
+}
 
-const Login = () => {
+export const Login: React.FC<LoginProps> = ({login}) => {
   const {register, handleSubmit, errors} = useForm({
     validationSchema: LoginSchema,
   });
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => login(data);
 
-  const rendeValidationError = (value) => {
-    if (errors[value])
-      return <span className="error">{errors[value].message}</span>;
+  const rendeValidationError = (name) => {
+    if (errors[name])
+      return <span className="error">{errors[name].message}</span>;
   };
 
   return (
@@ -74,21 +74,20 @@ const Login = () => {
             </div>
             <div className="submit-btn-wrapper">
               <button type="submit">Login</button>
-              <Link
-                to="/signup"
-                className="signup-link"
-              >
+              <Link to="/signup" className="signup-link">
                 Sign up
               </Link>
             </div>
           </form>
         </div>
-        <span className="terms">
-          Term of use. Privacy policy
-        </span>
+        <span className="terms">Term of use. Privacy policy</span>
       </div>
     </div>
   );
 };
 
-export default Login;
+const mapDispatchToProps = {
+  login,
+};
+
+export default connect(null, mapDispatchToProps)(Login);

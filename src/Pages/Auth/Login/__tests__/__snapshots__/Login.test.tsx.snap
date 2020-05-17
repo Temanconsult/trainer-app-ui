@@ -3,13 +3,13 @@
 exports[`<Login /> renders login component elements correctly 1`] = `
 <div>
   <div
-    class="h-screen flex flex-row"
+    class="login-wrapper"
   >
     <div
-      class="h-full w-1/2 hidden lg:block"
+      class="left-section"
     >
       <div
-        class="h-full w-full p-5 flex justify-center items-center"
+        class="image"
       >
         <svg>
           login.svg
@@ -17,57 +17,53 @@ exports[`<Login /> renders login component elements correctly 1`] = `
       </div>
     </div>
     <div
-      class="flex flex-col justify-center relative w-full lg:w-1/2 "
+      class="right-section"
     >
       <div
-        class="flex justify-center mb-10"
+        class="logo-wrapper"
       >
         <svg>
           logo.svg
         </svg>
       </div>
       <span
-        class="text-center mb-10 text-black opacity-50 text-base"
+        class="welcome"
       >
         Welcome back! 
-        <br
-          class="sm:inline lg:hidden"
-        />
+        <br />
         <span>
           Please login to your account.
         </span>
       </span>
       <div
-        class="flex flex-col justify-center items-center w-full h-64"
+        class="form-wrapper"
       >
-        <form
-          class="flex flex-col w-10/12 md:w-8/12 h-full"
-        >
+        <form>
           <div
-            class="input-wrapper my-4 w-full"
+            class="input-wrapper"
           >
             <input
-              class="input py-2 border-gray-400 border-b text-xs outline-none"
+              class="input"
               name="username"
               placeholder="Username"
               type="text"
             />
           </div>
           <div
-            class="input-wrapper my-4 w-full"
+            class="input-wrapper"
           >
             <input
-              class="input py-2 border-gray-400 border-b text-xs outline-none"
+              class="input"
               name="password"
               placeholder="Password"
               type="password"
             />
           </div>
           <div
-            class="flex justify-between mt-6 items-center"
+            class="form-footer"
           >
             <div
-              class="flex items-center"
+              class="remember-me"
             >
               <input
                 name="rememberMe"
@@ -80,23 +76,22 @@ exports[`<Login /> renders login component elements correctly 1`] = `
               </span>
             </div>
             <a
-              class="italic"
+              class="forgot-password"
               href="/"
             >
               Forgot Password?
             </a>
           </div>
           <div
-            class="flex justify-between mt-10 items-center"
+            class="submit-btn-wrapper"
           >
             <button
-              class="btn text-white bg-custom-primary w-1/2 mr-2"
               type="submit"
             >
               Login
             </button>
             <a
-              class="btn text-black border border-custom-primary opacity-75 w-1/2 ml-2"
+              class="signup-link"
               href="/signup"
             >
               Sign up
@@ -105,7 +100,7 @@ exports[`<Login /> renders login component elements correctly 1`] = `
         </form>
       </div>
       <span
-        class="absolute left-0 right-0 bottom-0 p-4 text-xs text-center text-custom-gray"
+        class="terms"
       >
         Term of use. Privacy policy
       </span>
