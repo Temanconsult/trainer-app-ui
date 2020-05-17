@@ -12,7 +12,7 @@ interface LoginProps {
   login(payload): void;
 }
 
-const Login: React.FC<LoginProps> = ({login}) => {
+export const Login: React.FC<LoginProps> = ({login}) => {
   const {register, handleSubmit, errors} = useForm({
     validationSchema: LoginSchema,
   });

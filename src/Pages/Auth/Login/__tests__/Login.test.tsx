@@ -1,7 +1,7 @@
 import React from 'react';
 import {render} from '@testing-library/react';
 import {BrowserRouter as Router} from 'react-router-dom';
-import Login from '..';
+import {Login} from '..';
 
 describe('<Login />', () => {
   test('renders login component elements correctly', () => {

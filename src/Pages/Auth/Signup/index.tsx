@@ -12,7 +12,7 @@ interface SignupProps {
   signup(payload): void;
 }
 
-const Signup: React.FC<SignupProps> = ({signup}) => {
+export const Signup: React.FC<SignupProps> = ({signup}) => {
   const {register, handleSubmit, errors} = useForm({
     validationSchema: SignupSchema,
   });
