@@ -1,4 +1,4 @@
-import {put, takeEvery} from 'redux-saga/effects';
+import {call, put, takeEvery} from 'redux-saga/effects';
 import {SIGNUP, LOGIN} from '../constants/auth';
 import {
   signupSuccess,
@@ -6,24 +6,26 @@ import {
   loginSuccess,
   loginFailure,
 } from '../actions/auth';
-// import {signup as signupAPI, login as loginAPI} from '../../api/auth';
+import {signup as signupAPI, login as loginAPI} from '../../api/auth';
 
 export function* signup() {
   try {
-    // const response = yield call(signupAPI, {});
+    const response = yield call(signupAPI, {});
+    console.log('got here', response);
     yield put(signupSuccess('Request successful'));
   } catch (error) {
-    console.log('got here');
+    console.log('got here', error);
     yield put(signupFailure('Request failed!!!'));
   }
 }
 
 export function* login() {
   try {
-    // const response = yield call(loginAPI, {});
+    const response = yield call(loginAPI, {});
+    console.log('got here', response);
     yield put(loginSuccess('Request successful'));
   } catch (error) {
-    console.log('got here');
+    console.log('got here', error);
     yield put(loginFailure('Request failed!!!'));
   }
 }
