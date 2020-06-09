@@ -4,7 +4,10 @@ import LandingPage from './Pages/LandingPage';
 import PageNotFound from './Pages/PageNotFound';
 import Login from './Pages/Auth/Login';
 import Signup from './Pages/Auth/Signup';
+import {toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
+toast.configure();
 const App = () => {
   return (
     <>
