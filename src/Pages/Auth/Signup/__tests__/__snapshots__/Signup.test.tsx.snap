@@ -1,0 +1,170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Signup /> renders signup component elements correctly 1`] = `
+<div>
+  <div
+    class="signup-wrapper"
+  >
+    <div
+      class="left-section"
+    >
+      <div
+        class="image"
+      >
+        <svg>
+          login.svg
+        </svg>
+      </div>
+    </div>
+    <div
+      class="right-section"
+    >
+      <div
+        class="content"
+      >
+        <div
+          class="logo-wrapper"
+        >
+          <svg>
+            logo.svg
+          </svg>
+        </div>
+        <span
+          class="welcome"
+        >
+          Please complete to create your account
+        </span>
+        <form>
+          <div
+            class="form-wrapper-half"
+          >
+            <div
+              class="input-wrapper"
+            >
+              <input
+                class="input"
+                name="firstname"
+                placeholder="First name"
+                type="text"
+              />
+            </div>
+            <div
+              class="input-wrapper"
+            >
+              <input
+                class="input"
+                name="lastname"
+                placeholder="Last name"
+                type="text"
+              />
+            </div>
+          </div>
+          <div
+            class="input-wrapper full"
+          >
+            <input
+              class="input"
+              name="username"
+              placeholder="Username"
+              type="text"
+            />
+          </div>
+          <div
+            class="input-wrapper full"
+          >
+            <input
+              class="input"
+              name="email"
+              placeholder="Email"
+              type="text"
+            />
+          </div>
+          <div
+            class="input-wrapper full"
+          >
+            <input
+              class="input"
+              name="password"
+              placeholder="Password"
+              type="password"
+            />
+          </div>
+          <div
+            class="input-wrapper full"
+          >
+            <input
+              class="input"
+              name="confirmPassword"
+              placeholder="Confirm Password"
+              type="password"
+            />
+          </div>
+          <div
+            class="terms-wrapper"
+          >
+            <div
+              class="terms-and-condition"
+            >
+              <input
+                name="termsAndCondition"
+                type="checkbox"
+              />
+              <span>
+                I agree with terms and conditionss
+              </span>
+            </div>
+          </div>
+          <div
+            class="btn-container"
+          >
+            <button
+              class="submit"
+              type="submit"
+            >
+              Sign up
+            </button>
+            <button
+              class="google"
+              type="button"
+            >
+              Sign up with Google
+            </button>
+            <button
+              class="facebook"
+              type="button"
+            >
+              Sign up with Facebook
+            </button>
+            <div
+              class="login-redirect"
+            >
+              <a
+                class="login-link"
+                href="/login"
+              >
+                <span>
+                  Already have an account? 
+                  <span
+                    class="sign-in"
+                  >
+                    Sign in.
+                  </span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div
+        class="tc"
+      >
+        <span
+          class="terms"
+        >
+          Term of use. Privacy policy
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

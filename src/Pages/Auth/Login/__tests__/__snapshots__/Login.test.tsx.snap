@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Login /> renders login component elements correctly 1`] = `
+<div>
+  <div
+    class="login-wrapper"
+  >
+    <div
+      class="left-section"
+    >
+      <div
+        class="image"
+      >
+        <svg>
+          login.svg
+        </svg>
+      </div>
+    </div>
+    <div
+      class="right-section"
+    >
+      <div
+        class="logo-wrapper"
+      >
+        <svg>
+          logo.svg
+        </svg>
+      </div>
+      <span
+        class="welcome"
+      >
+        Welcome back! 
+        <br />
+        <span>
+          Please login to your account.
+        </span>
+      </span>
+      <div
+        class="form-wrapper"
+      >
+        <form>
+          <div
+            class="input-wrapper"
+          >
+            <input
+              class="input"
+              name="username"
+              placeholder="Username"
+              type="text"
+            />
+          </div>
+          <div
+            class="input-wrapper"
+          >
+            <input
+              class="input"
+              name="password"
+              placeholder="Password"
+              type="password"
+            />
+          </div>
+          <div
+            class="form-footer"
+          >
+            <div
+              class="remember-me"
+            >
+              <input
+                name="rememberMe"
+                type="checkbox"
+              />
+              <span
+                class="ml-2"
+              >
+                Remember me
+              </span>
+            </div>
+            <a
+              class="forgot-password"
+              href="/"
+            >
+              Forgot Password?
+            </a>
+          </div>
+          <div
+            class="submit-btn-wrapper"
+          >
+            <button
+              type="submit"
+            >
+              Login
+            </button>
+            <a
+              class="signup-link"
+              href="/signup"
+            >
+              Sign up
+            </a>
+          </div>
+        </form>
+      </div>
+      <span
+        class="terms"
+      >
+        Term of use. Privacy policy
+      </span>
+    </div>
+  </div>
+</div>
+`;
