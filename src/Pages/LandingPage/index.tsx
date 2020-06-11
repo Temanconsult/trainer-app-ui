@@ -1,41 +1,31 @@
-import React, {useEffect, useCallback} from 'react';
-import {connect} from 'react-redux';
-import {reduxRequest} from '../../redux/actions/test';
-import { LandingPageState, LandingPageProps } from '../../models';
-import logo from '../../assets/icons/logo.svg';
+import React, {useState} from 'react';
+import menuIcon from '../../assets/icons/menu.svg';
+import MobileLandingPage from '../../Components/LandingPage/MobileHeader';
+import DesktopLangingPage from '../../Components/LandingPage/DesktopHeader';
+import Footer from '../../Components/LandingPage/Footer';
+import Hero from '../../Components/LandingPage/Hero';
+import Courses from '../../Components/LandingPage/Courses';
+import AboutUs from '../../Components/LandingPage/AboutUs';
+import Instructor from '../../Components/LandingPage/Instructor';
 
-export const LandingPage = ({isLoading, message, error}: LandingPageProps) => {
-  const callReduxTest = useCallback(() => {
-    reduxRequest();
-  }, []);
-  useEffect(() => {
-    callReduxTest();
-  }, [callReduxTest]);
+export const LandingPage = () => {
+  const [menu, toggleMenu] = useState(false);
   return (
-    <div className="flex bg-blue-600 flex-col justify-center h-screen items-center">
-      {isLoading ? (
-        <p>Loading...</p>
-      ) : (
-        <header className="text-center">
-          <p>Message: {message}</p>
-          {error && <p>{error}</p>}
-          <h3>Welcome To Trainer App UI</h3>
-          <img src={logo} className="h-64 w-64" alt="logo" />
-          <p className="text-white">We are getting started soon!!!</p>
-        </header>
-      )}
+    <div className="landing-page__container">
+      <div className="md:hidden">
+        <button onClick={() => toggleMenu(!menu)} className="outline-none">
+          <img src={menuIcon} alt="menu" className="w-10 h-auto m-4" />
+        </button>
+        {menu && <MobileLandingPage />}
+      </div>
+      <DesktopLangingPage />
+      <Hero />
+      <Courses />
+      <AboutUs />
+      <Instructor />
+      <Footer />
     </div>
   );
 };
 
-const mapStateToProps = (test: LandingPageState) => ({
-  isLoading: test.isLoading,
-  message: test.message,
-  error: test.error,
-});
-
-const mapDispatchToProps = {
-  reduxRequest,
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(LandingPage);
+export default LandingPage;
